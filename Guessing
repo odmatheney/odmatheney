@@ -1,0 +1,19 @@
+```mermaid
+graph TD
+    A[Start] --> B[Generate random number between 1 and 10]
+    B --> C[Display "Guess a number between 1 and 10"]
+    C --> D[User inputs guess]
+    D --> E{Is guess correct?}
+    E -- Yes --> F[Display "Congratulations, you guessed correctly."]
+    E -- No --> G{Is guess too high?}
+    G -- Yes --> H[Display "Guess is too high."]
+    G -- No --> I[Display "Guess is too low."]
+    H --> C
+    I --> C
+  ### Textual description
+1-3 Starts the program by generating a random number.
+4 asks user to make a guess
+5 allows user to umput guess
+6-8 determines wheter the guess was correct or not
+9-10 decides whether a wrong guess was too low or too high
+11-12 send them back to imput another guess if their first one was wrong
